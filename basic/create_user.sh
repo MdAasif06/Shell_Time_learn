@@ -6,3 +6,4 @@ echo "you entered $username"
 sudo useradd -m $username
 
 echo "new user addedd successfully"
+
