@@ -18,10 +18,10 @@ comment
 #fi
 
 read -p "Enter a number: " number
-if [ $number -gt 0 ]
+if  [[ $number -gt 0 ]]
 then
      echo "Number is positive"
-elif [ $number -lt 0 ]
+elif [[ $number -lt 0 ]]
 then 
     echo "Number is negative"
 else
