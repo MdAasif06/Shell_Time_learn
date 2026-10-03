@@ -8,8 +8,15 @@
 #   echo $i
 #done
 
+<<comment
+ 1 is argument 1 which is folder name
+ 2 is start range
+ 3 is end rangeask
+comment
 
-for ((i=1;i<=4;i++))
+
+for (( i=$2 ; i<=$3 ; i++ ))
 do
-  echo "hello guys"
+  mkdir "$1$i"
 done
+echo "$i folder created"
