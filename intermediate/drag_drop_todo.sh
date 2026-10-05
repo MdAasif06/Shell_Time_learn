@@ -27,11 +27,18 @@ deploye(){
 		drag-drop-app
 }
 echo "*********** Deployment start**********"
-install_requirement
+if ! install_requirement; then
+	echo "Requirement installation failed"
+	exit 1
+fi
 if ! code_clone; then
 	echo "the code directory already exitss"
+	exit 1
 fi
-deploye
+if ! deploye; then
+	echo "Deploye failed"
+	exit 1
+fi
 echo "############## deployment done#########"
 <<comment
 
